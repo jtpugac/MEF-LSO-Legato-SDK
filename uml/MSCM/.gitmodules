@@ -1,0 +1,3 @@
+[submodule "MEF_General_Common"]
+	path = MEF_General_Common
+	url = https://github.com/MEF-GIT/MEF-General-Common.git

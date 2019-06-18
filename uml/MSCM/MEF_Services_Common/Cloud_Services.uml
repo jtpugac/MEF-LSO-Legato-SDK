@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OpenModel_Profile="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26 ../MEF_General_Common/UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA">
+  <uml:Model xmi:id="_YwjpQFFREem8JI7xzKeirA" name="Cloud_Services">
+    <packagedElement xmi:type="uml:Package" xmi:id="_omyMAFFaEem8JI7xzKeirA" name="ObjectClasses"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_r6EhsFFaEem8JI7xzKeirA" name="Associations"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_CVV04FFbEem8JI7xzKeirA" name="Imports">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_n8qjIGayEemGdJ8pNpynNg">
+        <importedPackage xmi:type="uml:Model" href="../MEF_General_Common/MEF_Types.uml#_BTq7kDAzEeeMUevANHuhog"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_n9XtwGayEemGdJ8pNpynNg">
+        <importedPackage xmi:type="uml:Model" href="../MEF_General_Common/MEF_Common.uml#_wAkcEDAyEeeMUevANHuhog"/>
+      </packageImport>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_E7APkFFbEem8JI7xzKeirA" name="TypeDefinitions"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_HsYyEFFbEem8JI7xzKeirA" name="Diagrams"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_JpBd4FFbEem8JI7xzKeirA" name="Interfaces"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_zejR8GayEemGdJ8pNpynNg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ziCDwGayEemGdJ8pNpynNg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ziCDwWayEemGdJ8pNpynNg" key="Version" value="0.2.14"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ziCDwmayEemGdJ8pNpynNg" key="Comment" value="New stereotype OpenModelStatement added. It contains the generic information of the model and extends the Metaclass &quot;Model&quot;."/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ziCDw2ayEemGdJ8pNpynNg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ziCDxGayEemGdJ8pNpynNg" key="Date" value="2018-04-13"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ziCDxWayEemGdJ8pNpynNg" key="Author" value="IISOMI"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zej5AGayEemGdJ8pNpynNg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../MEF_General_Common/UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../MEF_General_Common/UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_m1xqsHBgEd6FKu9XX1078A"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_ziIxcGayEemGdJ8pNpynNg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ziJYgWayEemGdJ8pNpynNg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ziJYgmayEemGdJ8pNpynNg" key="Version" value="0.0.9"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ziJYg2ayEemGdJ8pNpynNg" key="Comment" value="BITS encoding and bitsDefinition property added."/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ziJYhGayEemGdJ8pNpynNg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ziJYhWayEemGdJ8pNpynNg" key="Date" value="2018-04-13"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ziJYhmayEemGdJ8pNpynNg" key="Author" value="IISOMI"/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ziJYgGayEemGdJ8pNpynNg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../MEF_General_Common/UmlProfiles/OpenInterfaceModelProfile/OpenInterfaceModel_Profile.profile.uml#_3NPRMD78EeiIisB6uOvKFA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../MEF_General_Common/UmlProfiles/OpenInterfaceModelProfile/OpenInterfaceModel_Profile.profile.uml#_UbM6ILbyEeaufdfMFhfy_A"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_4sPpYGazEemGdJ8pNpynNg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4vH-QWazEemGdJ8pNpynNg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4vH-QmazEemGdJ8pNpynNg" key="Version" value="0.0.4"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4vH-Q2azEemGdJ8pNpynNg" key="Comment" value="Metaclasses Property and Stereotype added via &lt;Element Import>."/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4vH-RGazEemGdJ8pNpynNg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4vH-RWazEemGdJ8pNpynNg" key="Date" value="2017-08-08"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4vH-RmazEemGdJ8pNpynNg" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4vH-QGazEemGdJ8pNpynNg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../MEF_General_Common/UmlProfiles/ProfileLifecycleProfile/ProfileLifecycle_Profile.profile.uml#_AL3HsHweEee8oZaf2rRQlg"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../MEF_General_Common/UmlProfiles/ProfileLifecycleProfile/ProfileLifecycle_Profile.profile.uml#_CBpGoEdZEearpawF38eisA"/>
+    </profileApplication>
+  </uml:Model>
+  <OpenModel_Profile:OpenModelStatement xmi:id="_ziBcsGayEemGdJ8pNpynNg" base_Model="_YwjpQFFREem8JI7xzKeirA"/>
+</xmi:XMI>

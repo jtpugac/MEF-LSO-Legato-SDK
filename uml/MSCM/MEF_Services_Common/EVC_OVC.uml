@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OpenInterfaceModel_Profile="http:///schemas/OpenInterfaceModel_Profile/_3NKYsD78EeiIisB6uOvKFA/8" xmlns:OpenModel_Profile="http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/OpenInterfaceModel_Profile/_3NKYsD78EeiIisB6uOvKFA/8 ../MEF_General_Common/UmlProfiles/OpenInterfaceModelProfile/OpenInterfaceModel_Profile.profile.uml#_3NPRMD78EeiIisB6uOvKFA http:///schemas/OpenModel_Profile/_S30WUD8HEeiIisB6uOvKFA/26 ../MEF_General_Common/UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA">
+  <uml:Model xmi:id="_5rhWgEZxEem6BKpTpByCDg" name="EVC_OVC">
+    <packagedElement xmi:type="uml:Package" xmi:id="_Qg10gEaKEem6BKpTpByCDg" name="ObjectClasses">
+      <packagedElement xmi:type="uml:Class" xmi:id="_csTI8P1FEeiVd-0lYI4k2g" name="Evc">
+        <generalization xmi:type="uml:Generalization" xmi:id="_YYhlcAR-EembRoaJ2tYEGQ">
+          <general xmi:type="uml:Class" href="../MEF-Common-Model/MCM.uml#_rnrYUFxoEeeHSO9Bs7q6og"/>
+        </generalization>
+        <generalization xmi:type="uml:Generalization" xmi:id="_gbpOIGqWEemTKfsWG0Bt2A">
+          <general xmi:type="uml:Class" href="../MEF_General_Common/MCM.uml#_rnrYUFxoEeeHSO9Bs7q6og"/>
+        </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_u6rMsv7sEeiRvO5IMGZvoA" name="evcendpoint" type="_rIXJ4P1FEeiVd-0lYI4k2g" aggregation="composite" association="_u6qloP7sEeiRvO5IMGZvoA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u6sa0f7sEeiRvO5IMGZvoA" value="2"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u6tB4P7sEeiRvO5IMGZvoA" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_J3YqwP7tEeiRvO5IMGZvoA" name="evcId">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_muL50B2gEemcmr1kmXAQjw" annotatedElement="_J3YqwP7tEeiRvO5IMGZvoA">
+            <body>A non-null RFC 2579 DisplayString no greater than 45 characters.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_LEn58P7tEeiRvO5IMGZvoA" name="listOfEvcEps">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_-QF6YB2fEemcmr1kmXAQjw" annotatedElement="_LEn58P7tEeiRvO5IMGZvoA">
+            <body>A list of EVC EP ID Service Attribute values.</body>
+          </ownedComment>
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_HOlScEzbEeWOKsU_6x9uZA"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_olIp0B2fEemcmr1kmXAQjw" value="2"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oleBAB2fEemcmr1kmXAQjw" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_NQX_0P7tEeiRvO5IMGZvoA" name="evcType">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_EgivUB2hEemcmr1kmXAQjw" annotatedElement="_NQX_0P7tEeiRvO5IMGZvoA">
+            <body>Point-to-Point, Multipoint-to-Multipoint, or Rooted-Multipoint.</body>
+          </ownedComment>
+          <type xmi:type="uml:Enumeration" href="mef-general-common/MEF_Types.uml#_JBwp8MCPEeWixMV2RCA9FQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_OdWwUP7tEeiRvO5IMGZvoA" name="evcServiceDisposition">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_l2cFkB24Eem20fRUOp4Cng" annotatedElement="_OdWwUP7tEeiRvO5IMGZvoA">
+            <body>A 3-tuple of the form &lt;u,m,b> where each element in the 3-tuple has the value Discard,
+Deliver, Unconditionally, or Deliver Conditionally.</body>
+          </ownedComment>
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_SPCLsB25Eem20fRUOp4Cng"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_SrRiQP7tEeiRvO5IMGZvoA" name="cTagPcpPreservation">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_67BLQB27EemUpuT-KJi_2g" annotatedElement="_SrRiQP7tEeiRvO5IMGZvoA">
+            <body>Use to preserve the value of the PCP field in C-Tagged Service Frames across and EVC.
+Enabled or Disabled.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_UISS0P7tEeiRvO5IMGZvoA" name="cTagDeiPreservation">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_UH9U0B28EemUpuT-KJi_2g" annotatedElement="_UISS0P7tEeiRvO5IMGZvoA">
+            <body>Used to preserve the value of the DEI field in C-Tagged Service Frames across and EVC. Enabled or Disabled.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_WyczAP7tEeiRvO5IMGZvoA" name="listOfCosNames">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_j5WIgB5BEemmmuxbHJwTiA" annotatedElement="_WyczAP7tEeiRvO5IMGZvoA">
+            <body>Used to specify all the Class of Service Names supported by an EVC. Non-empty list of Class of Service Names.</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EGrLoB5CEemmmuxbHJwTiA" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ZYUCAP7tEeiRvO5IMGZvoA" name="sls">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_lDN6oB5BEemmmuxbHJwTiA" annotatedElement="_ZYUCAP7tEeiRvO5IMGZvoA">
+            <body>Technical details of the service level, in terms of Performance Objectives, ageed between the Service Provider and the Subscriber as
+part of the Service Level Agreement. A given SLS might contain 0,1, ir more Performance Objectives for each Performance Metric.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_asSyYP7tEeiRvO5IMGZvoA" name="evcGroupMembership">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_mrya8B5BEemmmuxbHJwTiA" annotatedElement="_asSyYP7tEeiRvO5IMGZvoA">
+            <body>Used to specify an instance of the Multiple EVC Service Level Specification Service Attribute if any, in which the EVC is used.
+The value is None or a non-empty list of 3-tuples of the form &lt;ID,CoS_Name_G,SG>.</body>
+          </ownedComment>
+          <type xmi:type="uml:DataType" href="MEF-Services-Common.uml#_1k060B9JEemIAq4t00y-aA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_cHPGYP7tEeiRvO5IMGZvoA" name="maximumFrameSize">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_npD7gB5BEemmmuxbHJwTiA" annotatedElement="_cHPGYP7tEeiRvO5IMGZvoA">
+            <body>Attribute is an integer greater than or equal to 1522.</body>
+          </ownedComment>
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_IFxQQM-MEeWZuobpkt7kiw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_d2A8YP7tEeiRvO5IMGZvoA" name="availableMeg">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_of1LcB5BEemmmuxbHJwTiA" annotatedElement="_d2A8YP7tEeiRvO5IMGZvoA">
+            <body>The value is an integer from 0 to 7 or None.</body>
+          </ownedComment>
+          <type xmi:type="uml:Enumeration" href="mef-general-common/MEF_Types.uml#_ECFdUNAZEeWuNf2VLdfDCg"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ol1CEBgoEem7SrptZVvCVg" name="multipleEvcSls">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_pSewYB5BEemmmuxbHJwTiA" annotatedElement="_ol1CEBgoEem7SrptZVvCVg">
+            <body></body>
+          </ownedComment>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_rIXJ4P1FEeiVd-0lYI4k2g" name="EvcEndPoint">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_gAN5QBj7EemqZu1R1d-zXw" annotatedElement="_rIXJ4P1FEeiVd-0lYI4k2g">
+          <body>An EvcEndPoint is a construct at a UNI that selects a subset of the Service Frames that pass over the UNI.
+An EvcEndPoint represents the logical attachment of an Evc to a Uni.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_y7nzIBjWEemymIit32Gh2A">
+          <general xmi:type="uml:Class" href="../MEF-Common-Model/MCM.uml#_Ft2sUAP0EeiSU7jePY2bCw"/>
+        </generalization>
+        <generalization xmi:type="uml:Generalization" xmi:id="_YpKJQGqWEemTKfsWG0Bt2A">
+          <general xmi:type="uml:Class" href="../MEF_General_Common/MCM.uml#_Ft2sUAP0EeiSU7jePY2bCw"/>
+        </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Q068MBgpEem7SrptZVvCVg" name="endPointId">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_t-YdQBj7EemqZu1R1d-zXw" annotatedElement="_Q068MBgpEem7SrptZVvCVg">
+            <body>A string that is used to allow the Subscriber and Service Provider to uniquely identify the EvcEndPoint for operations purposes.</body>
+          </ownedComment>
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_HOlScEzbEeWOKsU_6x9uZA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_bu8ZwBgpEem7SrptZVvCVg" name="endPointUni">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_veZegBj7EemqZu1R1d-zXw" annotatedElement="_bu8ZwBgpEem7SrptZVvCVg">
+            <body>Specify the UNI where the EvcEndPoint is located. The EvcEndPoint is said to be at this Uni.</body>
+          </ownedComment>
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_HOlScEzbEeWOKsU_6x9uZA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_deaMQBgpEem7SrptZVvCVg" name="role">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_wrrJ8Bj7EemqZu1R1d-zXw" annotatedElement="_deaMQBgpEem7SrptZVvCVg">
+            <body>Value of EvcEndPoint role is one of Root or Leaf.</body>
+          </ownedComment>
+          <type xmi:type="uml:Enumeration" href="mef-general-common/MEF_Types.uml#_TIbvgNEYEeWSGOiCH6EQXQ"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_e-bNgBgpEem7SrptZVvCVg" name="map"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_gIyH0BgpEem7SrptZVvCVg" name="ingressCosMap"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kES7IBgpEem7SrptZVvCVg" name="colorMap"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_laaZgBgpEem7SrptZVvCVg" name="egressMap"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_muaYABgpEem7SrptZVvCVg" name="ingressBwp"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_o3T-MBgpEem7SrptZVvCVg" name="cosNameIngressBwp"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_sJlnQBgpEem7SrptZVvCVg" name="egressBwp">
+          <type xmi:type="uml:Class" href="mef-general-common/MEF_Common.uml#_qMhCMM-DEeWZuobpkt7kiw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_thyJQBgpEem7SrptZVvCVg" name="cosNameEgressBwp"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xG1kYBgpEem7SrptZVvCVg" name="sourceMacAddressLimit">
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_IFxQQM-MEeWZuobpkt7kiw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_0XuGUBgpEem7SrptZVvCVg" name="subscriberMegMip"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_xTESUP7qEeiRvO5IMGZvoA" name="EvpTree">
+        <generalization xmi:type="uml:Generalization" xmi:id="_k4X74AR_EembRoaJ2tYEGQ">
+          <general xmi:type="uml:Class" href="../MEF-Common-Model/MCM.uml#_b6a4cFxsEeeHSO9Bs7q6og"/>
+        </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_gcu-YgR8EembRoaJ2tYEGQ" name="evc" type="_csTI8P1FEeiVd-0lYI4k2g" aggregation="composite" association="_gcuXUAR8EembRoaJ2tYEGQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gcwMgAR8EembRoaJ2tYEGQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gcwMgQR8EembRoaJ2tYEGQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_pserwEAiEemOP_EuHKL_sg" name="evptreedefaults" type="_etG0IEAiEemOP_EuHKL_sg" aggregation="composite" association="_psddoEAiEemOP_EuHKL_sg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_psfS0UAiEemOP_EuHKL_sg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_psfS0kAiEemOP_EuHKL_sg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_wJv50P7qEeiRvO5IMGZvoA" name="EpTree">
+        <generalization xmi:type="uml:Generalization" xmi:id="_kYgJAAR_EembRoaJ2tYEGQ">
+          <general xmi:type="uml:Class" href="../MEF-Common-Model/MCM.uml#_b6a4cFxsEeeHSO9Bs7q6og"/>
+        </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_gArUgAR8EembRoaJ2tYEGQ" name="evc" type="_csTI8P1FEeiVd-0lYI4k2g" aggregation="composite" association="_gAqGYAR8EembRoaJ2tYEGQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gAr7kAR8EembRoaJ2tYEGQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gAr7kQR8EembRoaJ2tYEGQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_oqoNMkAiEemOP_EuHKL_sg" name="eptreedefaults" type="_a17HMEAiEemOP_EuHKL_sg" aggregation="composite" association="_oqm_EEAiEemOP_EuHKL_sg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oqpbUUAiEemOP_EuHKL_sg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oqqCYEAiEemOP_EuHKL_sg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_u_gUQP7qEeiRvO5IMGZvoA" name="EvpLan">
+        <generalization xmi:type="uml:Generalization" xmi:id="_jt7iAAR_EembRoaJ2tYEGQ">
+          <general xmi:type="uml:Class" href="../MEF-Common-Model/MCM.uml#_b6a4cFxsEeeHSO9Bs7q6og"/>
+        </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_fg5oQAR8EembRoaJ2tYEGQ" name="evc" type="_csTI8P1FEeiVd-0lYI4k2g" aggregation="composite" association="_fg4aIAR8EembRoaJ2tYEGQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fg62YAR8EembRoaJ2tYEGQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fg62YQR8EembRoaJ2tYEGQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_l8zVAEAiEemOP_EuHKL_sg" name="evplandefaults" type="_XxuWYEAiEemOP_EuHKL_sg" aggregation="composite" association="_l8yG4EAiEemOP_EuHKL_sg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_l8z8EUAiEemOP_EuHKL_sg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_l8z8EkAiEemOP_EuHKL_sg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_t4dMoP7qEeiRvO5IMGZvoA" name="EpLan">
+        <generalization xmi:type="uml:Generalization" xmi:id="_i9MBkAR_EembRoaJ2tYEGQ">
+          <general xmi:type="uml:Class" href="../MEF-Common-Model/MCM.uml#_b6a4cFxsEeeHSO9Bs7q6og"/>
+        </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_e--m8gR8EembRoaJ2tYEGQ" name="evc" type="_csTI8P1FEeiVd-0lYI4k2g" aggregation="composite" association="_e-9_4AR8EembRoaJ2tYEGQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_e-_1EAR8EembRoaJ2tYEGQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_e-_1EQR8EembRoaJ2tYEGQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_jCSEoUAiEemOP_EuHKL_sg" name="eplandefaults" type="_VRqNYEAiEemOP_EuHKL_sg" aggregation="composite" association="_jCQ2gEAiEemOP_EuHKL_sg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jCSrsUAiEemOP_EuHKL_sg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jCSrskAiEemOP_EuHKL_sg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_r3T0QP7qEeiRvO5IMGZvoA" name="Evpl">
+        <generalization xmi:type="uml:Generalization" xmi:id="_fX9nUAR_EembRoaJ2tYEGQ">
+          <general xmi:type="uml:Class" href="../MEF-Common-Model/MCM.uml#_b6a4cFxsEeeHSO9Bs7q6og"/>
+        </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_edMIggR8EembRoaJ2tYEGQ" name="evc" type="_csTI8P1FEeiVd-0lYI4k2g" aggregation="composite" association="_edK6YAR8EembRoaJ2tYEGQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_edMvkQR8EembRoaJ2tYEGQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_edNWoAR8EembRoaJ2tYEGQ" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_iTY-UUAiEemOP_EuHKL_sg" name="evpldefaults" type="_SyCwUEAiEemOP_EuHKL_sg" aggregation="composite" association="_iTXJIEAiEemOP_EuHKL_sg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iTZlYUAiEemOP_EuHKL_sg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iTaMcEAiEemOP_EuHKL_sg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_p566gP7qEeiRvO5IMGZvoA" name="Epl">
+        <generalization xmi:type="uml:Generalization" xmi:id="_eVdogAR_EembRoaJ2tYEGQ">
+          <general xmi:type="uml:Class" href="../MEF-Common-Model/MCM.uml#_b6a4cFxsEeeHSO9Bs7q6og"/>
+        </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_dCNYQAR8EembRoaJ2tYEGQ" name="evc" type="_csTI8P1FEeiVd-0lYI4k2g" aggregation="composite" association="_dCIfwAR8EembRoaJ2tYEGQ"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Q965kEAdEemOP_EuHKL_sg" name="epldefaults" type="_EMsCwEAdEemOP_EuHKL_sg" aggregation="composite">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Q99V0EAdEemOP_EuHKL_sg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Q9984EAdEemOP_EuHKL_sg" value="1"/>
+          <association xmi:type="uml:Association" href="MEF-Services-Common.uml#_Q9xvoEAdEemOP_EuHKL_sg"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_HSxF0P7VEeiRvO5IMGZvoA" name="Vuni">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_IRrWYBm2Eemx7Omi9qjTUw" name="vuniIdentifier"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_L2QQYBm2Eemx7Omi9qjTUw" name="ovcendpoint" type="_RYXSQP7UEeiRvO5IMGZvoA" aggregation="composite" association="_L2PCQBm2Eemx7Omi9qjTUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_L2SsoBm2Eemx7Omi9qjTUw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_L2W-EBm2Eemx7Omi9qjTUw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4cGvYBm2Eemx7Omi9qjTUw" name="sVlanId"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_D8DkgBm3Eemx7Omi9qjTUw" name="defaultEnniCeVlanId"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_1Lp10Bm3Eemx7Omi9qjTUw" name="maximumNumberOfOvc"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xW_7oFumEem72qyALm4SBw" name="ovcendpoint" type="_RYXSQP7UEeiRvO5IMGZvoA" aggregation="composite" association="_xW-tgFumEem72qyALm4SBw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xXAisVumEem72qyALm4SBw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xXAislumEem72qyALm4SBw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TBa6wP7UEeiRvO5IMGZvoA" name="OvcEndPointMap"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_RYXSQP7UEeiRvO5IMGZvoA" name="OvcEndPoint">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qeDH0v7VEeiRvO5IMGZvoA" name="ovcendpointmap" type="_TBa6wP7UEeiRvO5IMGZvoA" aggregation="composite" association="_qeCgwP7VEeiRvO5IMGZvoA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qeEV8P7VEeiRvO5IMGZvoA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qeEV8f7VEeiRvO5IMGZvoA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_VFpxcBmxEemx7Omi9qjTUw" name="ingressBwpPerOvcEp"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_jD4m4BmxEemx7Omi9qjTUw" name="egressBwpPerEp"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_mJYYMBmxEemx7Omi9qjTUw" name="ingressBwpPerCosName"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_p6_BkBmxEemx7Omi9qjTUw" name="egressBwpPerEgressEquivClassName"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_9IneoBmyEemx7Omi9qjTUw" name="ovcEpAggLinkDepth"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="__t43wBmyEemx7Omi9qjTUw" name="ovcEpSourceMacAddrLimit"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_CKQMgBmzEemx7Omi9qjTUw" name="ovcEpMip"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_EgBKABmzEemx7Omi9qjTUw" name="ovcEpMaintEpList"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_NW0vcP7UEeiRvO5IMGZvoA" name="Ovc">
+        <generalization xmi:type="uml:Generalization" xmi:id="_W8vysAR4EembRoaJ2tYEGQ">
+          <general xmi:type="uml:Class" href="../MEF-Common-Model/MCM.uml#_rnrYUFxoEeeHSO9Bs7q6og"/>
+        </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_nfuVgv7VEeiRvO5IMGZvoA" name="ovcendpoint" type="_RYXSQP7UEeiRvO5IMGZvoA" aggregation="composite" association="_nftHYP7VEeiRvO5IMGZvoA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nfvjof7VEeiRvO5IMGZvoA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nfwKsP7VEeiRvO5IMGZvoA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Ah3vsCDVEemnI4z3fL5gCw" name="ovcIdentifier"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_DLBjQCDVEemnI4z3fL5gCw" name="type"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_G_3t4CDVEemnI4z3fL5gCw" name="endPointList"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_IcakYCDVEemnI4z3fL5gCw" name="maxNumOfUniOvcEndPoints"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_LK_DcCDVEemnI4z3fL5gCw" name="maxNumOvcEndPoints"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_O0F4ICDVEemnI4z3fL5gCw" name="maximumFrameSize"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Sd_XACDVEemnI4z3fL5gCw" name="ceVlanIdPreservation"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_VCyPACDVEemnI4z3fL5gCw" name="ceVlanPcpPreservation"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_XlOWkCDVEemnI4z3fL5gCw" name="ceVlanDeiPreservation"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Z8mdoCDVEemnI4z3fL5gCw" name="sVlanDeiPreservation"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_cGQRwCDVEemnI4z3fL5gCw" name="listOfClassOfServiceNames"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_eeX_sCDVEemnI4z3fL5gCw" name="serviceLevelSpecification"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_g4OzACDVEemnI4z3fL5gCw" name="frameDelivery"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ilciwCDVEemnI4z3fL5gCw" name="availableMegLevel"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kYSZYCDVEemnI4z3fL5gCw" name="l2CpAddressSet"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_GPU1YlunEem72qyALm4SBw" name="ovcendpoint" type="_RYXSQP7UEeiRvO5IMGZvoA" aggregation="composite" association="_GPUOUFunEem72qyALm4SBw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GPWDgFunEem72qyALm4SBw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GPWDgVunEem72qyALm4SBw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Qwz_gP7TEeiRvO5IMGZvoA" name="OperatorUni">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_8AMI4BmwEemx7Omi9qjTUw" name="uniIdentifier"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_gZbCACDTEemnI4z3fL5gCw" name="ovcendpoint" type="_RYXSQP7UEeiRvO5IMGZvoA" aggregation="composite">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gZeFUCDTEemnI4z3fL5gCw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gZesYCDTEemnI4z3fL5gCw" value="1"/>
+          <association xmi:type="uml:Association" href="MEF-Services-Common.uml#_gZIHECDTEemnI4z3fL5gCw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_556ZsCDTEemnI4z3fL5gCw" name="physicalLayer"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-spI4CDTEemnI4z3fL5gCw" name="synchronousMode"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_CEhDoCDUEemnI4z3fL5gCw" name="numOfLinks"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_EVBtsCDUEemnI4z3fL5gCw" name="linkAggregation"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_GgYyACDUEemnI4z3fL5gCw" name="portConversionIdToAggLinkMap"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_J2OFYCDUEemnI4z3fL5gCw" name="serviceFrameFormat"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Nu0HkCDUEemnI4z3fL5gCw" name="defaultCeVlanId"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_QV-XECDUEemnI4z3fL5gCw" name="maxNumOfOvcEndPoints"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_SXj0UCDUEemnI4z3fL5gCw" name="maxNumOfCeVlanIdsPerOvcEndPoint"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_WslT0CDUEemnI4z3fL5gCw" name="ingressBwp"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_YHVakCDUEemnI4z3fL5gCw" name="egressBwp"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aXb08CDUEemnI4z3fL5gCw" name="linkOam"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_brO_ICDUEemnI4z3fL5gCw" name="meg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_d_7loCDUEemnI4z3fL5gCw" name="lagLinkMeg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_fvKHkCDUEemnI4z3fL5gCw" name="tokeShare"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hCVmsCDUEemnI4z3fL5gCw" name="envelopes"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_w5k_0lumEem72qyALm4SBw" name="ovcendpoint" type="_RYXSQP7UEeiRvO5IMGZvoA" aggregation="composite" association="_w5kYwFumEem72qyALm4SBw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w5mN8FumEem72qyALm4SBw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w5mN8VumEem72qyALm4SBw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_FOYTkP7SEeiRvO5IMGZvoA" name="ServiceProviderUni">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_caCN8v7qEeiRvO5IMGZvoA" name="envelope" association="_caBm4P7qEeiRvO5IMGZvoA">
+          <type xmi:type="uml:Class" href="MEF_Common.uml#_TyICUM-PEeWZuobpkt7kiw"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_caC1Af7qEeiRvO5IMGZvoA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_caC1Av7qEeiRvO5IMGZvoA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_iCKoAP7SEeiRvO5IMGZvoA" name="SubscriberUni">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_bj2_kBgzEem7SrptZVvCVg" annotatedElement="_iCKoAP7SEeiRvO5IMGZvoA">
+          <body>The Ethernet User Network Interface demarcation point between the responsibility of the Service Provider and the responsibility of the Subscriber</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_7zoyIBjVEemymIit32Gh2A">
+          <general xmi:type="uml:Class" href="../MEF-Common-Model/MCM.uml#_X7ddoFxuEeeHSO9Bs7q6og"/>
+        </generalization>
+        <generalization xmi:type="uml:Generalization" xmi:id="_Shh5IGqVEemTKfsWG0Bt2A">
+          <general xmi:type="uml:Class" href="../MEF_General_Common/MCM.uml#_X7ddoFxuEeeHSO9Bs7q6og"/>
+        </generalization>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_dL_2Yf7qEeiRvO5IMGZvoA" name="envelope" association="_dL-oQP7qEeiRvO5IMGZvoA">
+          <type xmi:type="uml:Class" href="MEF_Common.uml#_TyICUM-PEeWZuobpkt7kiw"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dMAdcP7qEeiRvO5IMGZvoA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dMAdcf7qEeiRvO5IMGZvoA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_0tA7AA-QEemdP7URiIG7_Q" name="uniIdentifier">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_VpiSsBmSEembS9_TTt9teA" annotatedElement="_0tA7AA-QEemdP7URiIG7_Q">
+            <body>String that is used to allow the Subscriber and Service Provider to uniquely identify the UNI for operations purposes.</body>
+          </ownedComment>
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_HOlScEzbEeWOKsU_6x9uZA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_6451gA-QEemdP7URiIG7_Q" name="instantiation">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_EoUDIBguEem7SrptZVvCVg" annotatedElement="_6451gA-QEemdP7URiIG7_Q">
+            <body>A string that is used to identify an EVC within the SP network. MUST be unique across all EVCs in SP network. MUST contain to more than 45 characters. MUST be a non-null RFC 2579 DisplayString but not contain the characters 0x00 through 0x1f.
+</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_C_NOQA-REemdP7URiIG7_Q" name="virtualFrameMap">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_YqkawBmSEembS9_TTt9teA" annotatedElement="_C_NOQA-REemdP7URiIG7_Q">
+            <body>The value of the Subscriber UNI is either Physical or Virtual.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_htVvgA-REemdP7URiIG7_Q" name="listOfPhyLinks">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_XBlDsBmSEembS9_TTt9teA" annotatedElement="_htVvgA-REemdP7URiIG7_Q">
+            <body>Either Not Applicable or a non-empty list of 4-tuples of the form &lt;id,pl,fs,pt>, with on list item
+for each physical link. The value of id is an identifier for the physical link. The value of pl specifies
+a physical layer. fs indicates if synchronous Ethernet is used on the physical link corresponding
+to the 4-tuple and has the value either Enable or Disabled. The value pt indicates if the Precision
+Time Protocol is used on the physical link corresponding to the 4-tuple and has the value either
+Enabled or Disabled.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kpMcoA-REemdP7URiIG7_Q" name="linkAggregation">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_Y1FSkBmbEembS9_TTt9teA" annotatedElement="_kpMcoA-REemdP7URiIG7_Q">
+            <body></body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_XS57gA-SEemdP7URiIG7_Q" name="portConversionId" visibility="public">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_aFfxkBmbEembS9_TTt9teA" annotatedElement="_XS57gA-SEemdP7URiIG7_Q">
+            <body></body>
+          </ownedComment>
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_VUKwcE0EEeWOKsU_6x9uZA"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_a6YYgA-SEemdP7URiIG7_Q" name="serviceFrameFormat">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_bBb1YBmbEembS9_TTt9teA" annotatedElement="_a6YYgA-SEemdP7URiIG7_Q">
+            <body>Specifies the allowed formats of Service Frames.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_efp2EA-SEemdP7URiIG7_Q" name="maximumFrameSize">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_cRwNwBmbEembS9_TTt9teA" annotatedElement="_efp2EA-SEemdP7URiIG7_Q">
+            <body>UNI Maximum Service Frame Size is an integer number of bytes >= 1522.</body>
+          </ownedComment>
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_IFxQQM-MEeWZuobpkt7kiw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ifAAgA-SEemdP7URiIG7_Q" name="maximumNumberOfEvc">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_ePqyUBmjEembS9_TTt9teA" annotatedElement="_ifAAgA-SEemdP7URiIG7_Q">
+            <body>An integer greater than or equal to 1 that limits the number of EVC End Points that can be located
+at the UNI.</body>
+          </ownedComment>
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_IFxQQM-MEeWZuobpkt7kiw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_oBR9UA-SEemdP7URiIG7_Q" name="maxNumOfCtagVlanIdsPerEvcEp"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_2RmoUA-SEemdP7URiIG7_Q" name="tokenShare"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_5Dh9YA-SEemdP7URiIG7_Q" name="envelopes"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_8TCmUA-SEemdP7URiIG7_Q" name="linkOam">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_luRccBmkEembS9_TTt9teA" annotatedElement="_8TCmUA-SEemdP7URiIG7_Q">
+            <body>Value is either Enabled or Disabled.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-dUFgA-SEemdP7URiIG7_Q" name="meg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_APsCEA-TEemdP7URiIG7_Q" name="lagLinkMegServiceAttribute"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_gSPYkA-TEemdP7URiIG7_Q" name="l2cpAddressSet">
+          <type xmi:type="uml:Enumeration" href="mef-general-common/MEF_Types.uml#_Zi6cQEqoEeWslOhmT__Dhw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kuVJYA-TEemdP7URiIG7_Q" name="l2cpPeering">
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_CNbxUEqtEeWslOhmT__Dhw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_s33J4BgmEem7SrptZVvCVg" name="evcendpoint" type="_rIXJ4P1FEeiVd-0lYI4k2g" aggregation="composite" association="_s3gkkBgmEem7SrptZVvCVg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s39QgBgmEem7SrptZVvCVg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s39QgRgmEem7SrptZVvCVg" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_M1LosBm0Eemx7Omi9qjTUw" name="Enni">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_QX79wBm0Eemx7Omi9qjTUw" name="peeringIdentifier"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_WtLBgBm0Eemx7Omi9qjTUw" name="physicalLayer"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_cBPjMBm0Eemx7Omi9qjTUw" name="frameFormat"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_TUgnIhm1Eemx7Omi9qjTUw" name="ovcendpoint" type="_RYXSQP7UEeiRvO5IMGZvoA" aggregation="composite" association="_TUgAEBm1Eemx7Omi9qjTUw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TUh1QBm1Eemx7Omi9qjTUw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TUh1QRm1Eemx7Omi9qjTUw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Yf-mcBm1Eemx7Omi9qjTUw" name="numberOfLinks"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_m-qdkBm1Eemx7Omi9qjTUw" name="linkAggregation"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_pjE7EBm1Eemx7Omi9qjTUw" name="portConversionIdAggregationLinkMap"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_swaZwBm1Eemx7Omi9qjTUw" name="meg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_t1LpcBm1Eemx7Omi9qjTUw" name="lagLinkMeg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_vRPXwBm1Eemx7Omi9qjTUw" name="linkOam"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_vrk7olumEem72qyALm4SBw" name="ovcendpoint" type="_RYXSQP7UEeiRvO5IMGZvoA" aggregation="composite" association="_vrkUkFumEem72qyALm4SBw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vrmJwVumEem72qyALm4SBw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vrmw0FumEem72qyALm4SBw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Vv2-MEcmEem2jN-8UHEy0A" name="TransitELan">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Vv2-MUcmEem2jN-8UHEy0A" name="ovc" type="_NW0vcP7UEeiRvO5IMGZvoA" aggregation="composite">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vv2-MkcmEem2jN-8UHEy0A" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vv2-M0cmEem2jN-8UHEy0A" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Vv4zYEcmEem2jN-8UHEy0A" name="TransitELine">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Vv4zYUcmEem2jN-8UHEy0A" name="ovc" type="_NW0vcP7UEeiRvO5IMGZvoA" aggregation="composite">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vv4zYkcmEem2jN-8UHEy0A"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vv4zY0cmEem2jN-8UHEy0A" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Vv6BgEcmEem2jN-8UHEy0A" name="AccessELan">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Vv6BgUcmEem2jN-8UHEy0A" name="ovc" type="_NW0vcP7UEeiRvO5IMGZvoA" aggregation="composite">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vv6BgkcmEem2jN-8UHEy0A" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vv6Bg0cmEem2jN-8UHEy0A" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Vv7PoEcmEem2jN-8UHEy0A" name="AccessELine">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Vv7PoUcmEem2jN-8UHEy0A" name="ovc" type="_NW0vcP7UEeiRvO5IMGZvoA" aggregation="composite">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vv7PokcmEem2jN-8UHEy0A" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vv7Po0cmEem2jN-8UHEy0A" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_etG0IEAiEemOP_EuHKL_sg" name="EvpTreeDefaults"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_a17HMEAiEemOP_EuHKL_sg" name="EpTreeDefaults"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_XxuWYEAiEemOP_EuHKL_sg" name="EvpLanDefaults"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_VRqNYEAiEemOP_EuHKL_sg" name="EpLanDefaults"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_EMsCwEAdEemOP_EuHKL_sg" name="EplDefaults">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_UIZ4kEAdEemOP_EuHKL_sg" name="bundling">
+          <type xmi:type="uml:Enumeration" href="mef-general-common/MEF_Types.uml#_IomCMB5DEemmmuxbHJwTiA"/>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_OeoP0EAhEemOP_EuHKL_sg">
+            <instance xmi:type="uml:EnumerationLiteral" href="mef-general-common/MEF_Types.uml#_MWQmwB5DEemmmuxbHJwTiA"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_rNzG0EAdEemOP_EuHKL_sg" name="numOfLinks">
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_IFxQQM-MEeWZuobpkt7kiw"/>
+          <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_Z7WKwEAhEemOP_EuHKL_sg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_fHdqUEAhEemOP_EuHKL_sg" name="serviceMultiplexing">
+          <type xmi:type="uml:Enumeration" href="mef-general-common/MEF_Types.uml#_IomCMB5DEemmmuxbHJwTiA"/>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="_owNGMEAhEemOP_EuHKL_sg">
+            <type xmi:type="uml:Enumeration" href="mef-general-common/MEF_Types.uml#_IomCMB5DEemmmuxbHJwTiA"/>
+            <instance xmi:type="uml:EnumerationLiteral" href="mef-general-common/MEF_Types.uml#_MWQmwB5DEemmmuxbHJwTiA"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_0m_uAEAhEemOP_EuHKL_sg" name="allToOneBundling">
+          <type xmi:type="uml:Enumeration" href="mef-general-common/MEF_Types.uml#_IomCMB5DEemmmuxbHJwTiA"/>
+          <defaultValue xmi:type="uml:InstanceValue" xmi:id="__H4S0EAhEemOP_EuHKL_sg">
+            <type xmi:type="uml:Enumeration" href="mef-general-common/MEF_Types.uml#_IomCMB5DEemmmuxbHJwTiA"/>
+            <instance xmi:type="uml:EnumerationLiteral" href="mef-general-common/MEF_Types.uml#_KwOdEB5DEemmmuxbHJwTiA"/>
+          </defaultValue>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_zV7DEEpmEemiTOBL29UmAw" name="BandwidthPolicyCriterion">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_hxZQ0EpwEemiTOBL29UmAw" annotatedElement="_zV7DEEpmEemiTOBL29UmAw">
+          <body>Specifies a rate (bandwidth) limit on an Application Flow or Application Flow Group.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_g_YUIEpnEemiTOBL29UmAw" name="commit">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_FAEagEpwEemiTOBL29UmAw" annotatedElement="_g_YUIEpnEemiTOBL29UmAw">
+            <body>Amount of bandwidth in bits per second that is committed to the Application Flow.</body>
+          </ownedComment>
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_IFxQQM-MEeWZuobpkt7kiw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_h9b-MEpvEemiTOBL29UmAw" name="max">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_qdca8EpwEemiTOBL29UmAw" annotatedElement="_h9b-MEpvEemiTOBL29UmAw">
+            <body>Maximum amount of bandwidth in bits per second that can be used by the Application Flow.</body>
+          </ownedComment>
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_IFxQQM-MEeWZuobpkt7kiw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_kt_aQEpvEemiTOBL29UmAw" name="time">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_D8UCAEpxEemiTOBL29UmAw" annotatedElement="_kt_aQEpvEemiTOBL29UmAw">
+            <body>Averaging period (in milliseconds) for packet flow.</body>
+          </ownedComment>
+          <type xmi:type="uml:DataType" href="mef-general-common/MEF_Types.uml#_IFxQQM-MEeWZuobpkt7kiw"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_SyCwUEAiEemOP_EuHKL_sg" name="EvplDefaults"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_XoyuoEaKEem6BKpTpByCDg" name="Associations">
+      <packagedElement xmi:type="uml:Association" xmi:id="_qeCgwP7VEeiRvO5IMGZvoA" memberEnd="_qeDH0v7VEeiRvO5IMGZvoA _qeEV8v7VEeiRvO5IMGZvoA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qeDH0P7VEeiRvO5IMGZvoA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qeDH0f7VEeiRvO5IMGZvoA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_qeEV8v7VEeiRvO5IMGZvoA" name="ovcendpoint" type="_RYXSQP7UEeiRvO5IMGZvoA" association="_qeCgwP7VEeiRvO5IMGZvoA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_nftHYP7VEeiRvO5IMGZvoA" memberEnd="_nfuVgv7VEeiRvO5IMGZvoA _nfwKsf7VEeiRvO5IMGZvoA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nfuVgP7VEeiRvO5IMGZvoA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nfuVgf7VEeiRvO5IMGZvoA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_nfwKsf7VEeiRvO5IMGZvoA" name="ovc" type="_NW0vcP7UEeiRvO5IMGZvoA" association="_nftHYP7VEeiRvO5IMGZvoA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_S3VckP7SEeiRvO5IMGZvoA" memberEnd="_S3XRwP7SEeiRvO5IMGZvoA _S3ZG8P7SEeiRvO5IMGZvoA" navigableOwnedEnd="_S3XRwP7SEeiRvO5IMGZvoA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_S3WqsP7SEeiRvO5IMGZvoA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_S3Wqsf7SEeiRvO5IMGZvoA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_S3ZG8P7SEeiRvO5IMGZvoA" name="serviceprovideruni" type="_FOYTkP7SEeiRvO5IMGZvoA" association="_S3VckP7SEeiRvO5IMGZvoA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_S3XRwP7SEeiRvO5IMGZvoA" name="evcendpoint" type="_rIXJ4P1FEeiVd-0lYI4k2g" aggregation="composite" association="_S3VckP7SEeiRvO5IMGZvoA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_S3Yf4P7SEeiRvO5IMGZvoA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_S3Yf4f7SEeiRvO5IMGZvoA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_caBm4P7qEeiRvO5IMGZvoA" memberEnd="_caCN8v7qEeiRvO5IMGZvoA _caDcEP7qEeiRvO5IMGZvoA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_caCN8P7qEeiRvO5IMGZvoA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_caCN8f7qEeiRvO5IMGZvoA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_caDcEP7qEeiRvO5IMGZvoA" name="serviceprovideruni" type="_FOYTkP7SEeiRvO5IMGZvoA" association="_caBm4P7qEeiRvO5IMGZvoA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_dL-oQP7qEeiRvO5IMGZvoA" memberEnd="_dL_2Yf7qEeiRvO5IMGZvoA _dMAdcv7qEeiRvO5IMGZvoA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dL_PUP7qEeiRvO5IMGZvoA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dL_2YP7qEeiRvO5IMGZvoA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_dMAdcv7qEeiRvO5IMGZvoA" name="subscriberuni" type="_iCKoAP7SEeiRvO5IMGZvoA" association="_dL-oQP7qEeiRvO5IMGZvoA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_u6qloP7sEeiRvO5IMGZvoA" memberEnd="_u6rMsv7sEeiRvO5IMGZvoA _u6tB4f7sEeiRvO5IMGZvoA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_u6rMsP7sEeiRvO5IMGZvoA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_u6rMsf7sEeiRvO5IMGZvoA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_u6tB4f7sEeiRvO5IMGZvoA" name="evc" type="_csTI8P1FEeiVd-0lYI4k2g" association="_u6qloP7sEeiRvO5IMGZvoA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1YVMoP7sEeiRvO5IMGZvoA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1YnggP7sEeiRvO5IMGZvoA" value="1"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_s3gkkBgmEem7SrptZVvCVg" memberEnd="_s33J4BgmEem7SrptZVvCVg _s393kBgmEem7SrptZVvCVg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_s30toBgmEem7SrptZVvCVg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_s30toRgmEem7SrptZVvCVg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_s393kBgmEem7SrptZVvCVg" name="subscriberuni" type="_iCKoAP7SEeiRvO5IMGZvoA" association="_s3gkkBgmEem7SrptZVvCVg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_TUgAEBm1Eemx7Omi9qjTUw" memberEnd="_TUgnIhm1Eemx7Omi9qjTUw _TUh1Qhm1Eemx7Omi9qjTUw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TUgnIBm1Eemx7Omi9qjTUw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TUgnIRm1Eemx7Omi9qjTUw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_TUh1Qhm1Eemx7Omi9qjTUw" name="enni" type="_M1LosBm0Eemx7Omi9qjTUw" association="_TUgAEBm1Eemx7Omi9qjTUw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_L2PCQBm2Eemx7Omi9qjTUw" memberEnd="_L2QQYBm2Eemx7Omi9qjTUw _L2aBYBm2Eemx7Omi9qjTUw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_L2PpUBm2Eemx7Omi9qjTUw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_L2PpURm2Eemx7Omi9qjTUw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_L2aBYBm2Eemx7Omi9qjTUw" name="vuni" type="_HSxF0P7VEeiRvO5IMGZvoA" association="_L2PCQBm2Eemx7Omi9qjTUw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_iTXJIEAiEemOP_EuHKL_sg" memberEnd="_iTY-UUAiEemOP_EuHKL_sg _iTaMcUAiEemOP_EuHKL_sg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_iTYXQEAiEemOP_EuHKL_sg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_iTY-UEAiEemOP_EuHKL_sg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_iTaMcUAiEemOP_EuHKL_sg" name="evpl" type="_r3T0QP7qEeiRvO5IMGZvoA" association="_iTXJIEAiEemOP_EuHKL_sg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_jCQ2gEAiEemOP_EuHKL_sg" memberEnd="_jCSEoUAiEemOP_EuHKL_sg _jCSrs0AiEemOP_EuHKL_sg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jCRdkEAiEemOP_EuHKL_sg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jCSEoEAiEemOP_EuHKL_sg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_jCSrs0AiEemOP_EuHKL_sg" name="eplan" type="_t4dMoP7qEeiRvO5IMGZvoA" association="_jCQ2gEAiEemOP_EuHKL_sg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_l8yG4EAiEemOP_EuHKL_sg" memberEnd="_l8zVAEAiEemOP_EuHKL_sg _l8z8E0AiEemOP_EuHKL_sg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_l8yt8EAiEemOP_EuHKL_sg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_l8yt8UAiEemOP_EuHKL_sg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_l8z8E0AiEemOP_EuHKL_sg" name="evplan" type="_u_gUQP7qEeiRvO5IMGZvoA" association="_l8yG4EAiEemOP_EuHKL_sg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_oqm_EEAiEemOP_EuHKL_sg" memberEnd="_oqoNMkAiEemOP_EuHKL_sg _oqqCYUAiEemOP_EuHKL_sg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oqoNMEAiEemOP_EuHKL_sg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oqoNMUAiEemOP_EuHKL_sg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_oqqCYUAiEemOP_EuHKL_sg" name="eptree" type="_wJv50P7qEeiRvO5IMGZvoA" association="_oqm_EEAiEemOP_EuHKL_sg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_psddoEAiEemOP_EuHKL_sg" memberEnd="_pserwEAiEemOP_EuHKL_sg _psf54EAiEemOP_EuHKL_sg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pseEsEAiEemOP_EuHKL_sg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pseEsUAiEemOP_EuHKL_sg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_psf54EAiEemOP_EuHKL_sg" name="evptree" type="_xTESUP7qEeiRvO5IMGZvoA" association="_psddoEAiEemOP_EuHKL_sg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gAqGYAR8EembRoaJ2tYEGQ" memberEnd="_gArUgAR8EembRoaJ2tYEGQ _gAr7kgR8EembRoaJ2tYEGQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gAqtcAR8EembRoaJ2tYEGQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gAqtcQR8EembRoaJ2tYEGQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_gAr7kgR8EembRoaJ2tYEGQ" name="eptree" type="_wJv50P7qEeiRvO5IMGZvoA" association="_gAqGYAR8EembRoaJ2tYEGQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_fg4aIAR8EembRoaJ2tYEGQ" memberEnd="_fg5oQAR8EembRoaJ2tYEGQ _fg62YgR8EembRoaJ2tYEGQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fg5BMAR8EembRoaJ2tYEGQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fg5BMQR8EembRoaJ2tYEGQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_fg62YgR8EembRoaJ2tYEGQ" name="evplan" type="_u_gUQP7qEeiRvO5IMGZvoA" association="_fg4aIAR8EembRoaJ2tYEGQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_edK6YAR8EembRoaJ2tYEGQ" memberEnd="_edMIggR8EembRoaJ2tYEGQ _edNWoQR8EembRoaJ2tYEGQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_edMIgAR8EembRoaJ2tYEGQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_edMIgQR8EembRoaJ2tYEGQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_edNWoQR8EembRoaJ2tYEGQ" name="evpl" type="_r3T0QP7qEeiRvO5IMGZvoA" association="_edK6YAR8EembRoaJ2tYEGQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_e-9_4AR8EembRoaJ2tYEGQ" memberEnd="_e--m8gR8EembRoaJ2tYEGQ _e-_1EgR8EembRoaJ2tYEGQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_e--m8AR8EembRoaJ2tYEGQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_e--m8QR8EembRoaJ2tYEGQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_e-_1EgR8EembRoaJ2tYEGQ" name="eplan" type="_t4dMoP7qEeiRvO5IMGZvoA" association="_e-9_4AR8EembRoaJ2tYEGQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_gcuXUAR8EembRoaJ2tYEGQ" memberEnd="_gcu-YgR8EembRoaJ2tYEGQ _gcwMggR8EembRoaJ2tYEGQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_gcu-YAR8EembRoaJ2tYEGQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_gcu-YQR8EembRoaJ2tYEGQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_gcwMggR8EembRoaJ2tYEGQ" name="evptree" type="_xTESUP7qEeiRvO5IMGZvoA" association="_gcuXUAR8EembRoaJ2tYEGQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_dCIfwAR8EembRoaJ2tYEGQ" memberEnd="_dCNYQAR8EembRoaJ2tYEGQ _dCP0gAR8EembRoaJ2tYEGQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dCMxMAR8EembRoaJ2tYEGQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dCMxMQR8EembRoaJ2tYEGQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_dCP0gAR8EembRoaJ2tYEGQ" name="epl" type="_p566gP7qEeiRvO5IMGZvoA" association="_dCIfwAR8EembRoaJ2tYEGQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_ZI5foFI0Eemz-84SeJ6HPw" memberEnd="_ZJCCgFI0Eemz-84SeJ6HPw _ZJD3sFI0Eemz-84SeJ6HPw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZI-_MFI0Eemz-84SeJ6HPw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ZI-_MVI0Eemz-84SeJ6HPw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ZJCCgFI0Eemz-84SeJ6HPw" name="create evc service" type="_XEKAsFI0Eemz-84SeJ6HPw" association="_ZI5foFI0Eemz-84SeJ6HPw"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_ZJD3sFI0Eemz-84SeJ6HPw" name="icm" type="_YHLj8FI0Eemz-84SeJ6HPw" association="_ZI5foFI0Eemz-84SeJ6HPw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_akBZ0FI0Eemz-84SeJ6HPw" memberEnd="_akDPAVI0Eemz-84SeJ6HPw _akEdIVI0Eemz-84SeJ6HPw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_akCn8FI0Eemz-84SeJ6HPw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_akDPAFI0Eemz-84SeJ6HPw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_akDPAVI0Eemz-84SeJ6HPw" name="icm" type="_YHLj8FI0Eemz-84SeJ6HPw" association="_akBZ0FI0Eemz-84SeJ6HPw"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_akEdIVI0Eemz-84SeJ6HPw" name="sof" type="_ZcP5cFI0Eemz-84SeJ6HPw" association="_akBZ0FI0Eemz-84SeJ6HPw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_vrkUkFumEem72qyALm4SBw" memberEnd="_vrk7olumEem72qyALm4SBw _vrmw0VumEem72qyALm4SBw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vrk7oFumEem72qyALm4SBw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vrk7oVumEem72qyALm4SBw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_vrmw0VumEem72qyALm4SBw" name="enni" type="_M1LosBm0Eemx7Omi9qjTUw" association="_vrkUkFumEem72qyALm4SBw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_w5kYwFumEem72qyALm4SBw" memberEnd="_w5k_0lumEem72qyALm4SBw _w5mN8lumEem72qyALm4SBw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w5k_0FumEem72qyALm4SBw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_w5k_0VumEem72qyALm4SBw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_w5mN8lumEem72qyALm4SBw" name="operatoruni" type="_Qwz_gP7TEeiRvO5IMGZvoA" association="_w5kYwFumEem72qyALm4SBw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GPUOUFunEem72qyALm4SBw" memberEnd="_GPU1YlunEem72qyALm4SBw _GPWDglunEem72qyALm4SBw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GPU1YFunEem72qyALm4SBw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GPU1YVunEem72qyALm4SBw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_GPWDglunEem72qyALm4SBw" name="ovc" type="_NW0vcP7UEeiRvO5IMGZvoA" association="_GPUOUFunEem72qyALm4SBw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_xW-tgFumEem72qyALm4SBw" memberEnd="_xW_7oFumEem72qyALm4SBw _xXAis1umEem72qyALm4SBw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xW_UkFumEem72qyALm4SBw" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xW_UkVumEem72qyALm4SBw" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_xXAis1umEem72qyALm4SBw" name="vuni" type="_HSxF0P7VEeiRvO5IMGZvoA" association="_xW-tgFumEem72qyALm4SBw"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_BTIewEaLEem6BKpTpByCDg" name="Imports">
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_dSLWYGayEemGdJ8pNpynNg">
+        <importedPackage xmi:type="uml:Model" href="../MEF_General_Common/MEF_Types.uml#_BTq7kDAzEeeMUevANHuhog"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_dWa9MGayEemGdJ8pNpynNg">
+        <importedPackage xmi:type="uml:Model" href="../MEF_General_Common/MEF_Common.uml#_wAkcEDAyEeeMUevANHuhog"/>
+      </packageImport>
+      <packageImport xmi:type="uml:PackageImport" xmi:id="_VMYAwGdeEemazsno5aN8FQ">
+        <importedPackage xmi:type="uml:Model" href="../MEF_General_Common/MCM.uml#_A3-NgFxmEeeHSO9Bs7q6og"/>
+      </packageImport>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_CwAFYEaLEem6BKpTpByCDg" name="TypeDefinitions"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_FjeSkEaLEem6BKpTpByCDg" name="Diagrams">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_eD0xgFGEEemN368b6O4XBQ">
+        <body>EVC_OVC Model</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_uWMMwFGEEemN368b6O4XBQ">
+        <body>TAPI Model</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_kvMuoFubEem72qyALm4SBw">
+        <body>MEF-Common Model</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_wsltsFubEem72qyALm4SBw">
+        <body>EVC Model</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="__10F4Fu3Eem72qyALm4SBw">
+        <body>OVC Model</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_CKT4EFu4Eem72qyALm4SBw">
+        <body>MEF-Common Model</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_XEKAsFI0Eemz-84SeJ6HPw" name="Create EVC Service"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_YHLj8FI0Eemz-84SeJ6HPw" name="ICM"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_ZcP5cFI0Eemz-84SeJ6HPw" name="SOF"/>
+      <packagedElement xmi:type="uml:Interaction" xmi:id="_dBUisFI0Eemz-84SeJ6HPw" name="Interaction8">
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_eimIMFI0Eemz-84SeJ6HPw" name="SOF" coveredBy="_gdSTQFI0Eemz-84SeJ6HPw _iM-vQFI0Eemz-84SeJ6HPw"/>
+        <lifeline xmi:type="uml:Lifeline" xmi:id="_fOpV4FI0Eemz-84SeJ6HPw" name="ICM" coveredBy="_gdThYFI0Eemz-84SeJ6HPw _iM-IMFI0Eemz-84SeJ6HPw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_gdSTQFI0Eemz-84SeJ6HPw" name="Message3SendEvent" covered="_eimIMFI0Eemz-84SeJ6HPw" message="_gc-KMFI0Eemz-84SeJ6HPw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_gdThYFI0Eemz-84SeJ6HPw" name="Message3ReceiveEvent" covered="_fOpV4FI0Eemz-84SeJ6HPw" message="_gc-KMFI0Eemz-84SeJ6HPw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_iM-IMFI0Eemz-84SeJ6HPw" name="Message6SendEvent" covered="_fOpV4FI0Eemz-84SeJ6HPw" message="_iM86EFI0Eemz-84SeJ6HPw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_iM-vQFI0Eemz-84SeJ6HPw" name="Message6ReceiveEvent" covered="_eimIMFI0Eemz-84SeJ6HPw" message="_iM86EFI0Eemz-84SeJ6HPw"/>
+        <message xmi:type="uml:Message" xmi:id="_gc-KMFI0Eemz-84SeJ6HPw" name="createEvcService()" messageSort="asynchCall" receiveEvent="_gdThYFI0Eemz-84SeJ6HPw" sendEvent="_gdSTQFI0Eemz-84SeJ6HPw"/>
+        <message xmi:type="uml:Message" xmi:id="_iM86EFI0Eemz-84SeJ6HPw" name="OK" messageSort="asynchCall" receiveEvent="_iM-vQFI0Eemz-84SeJ6HPw" sendEvent="_iM-IMFI0Eemz-84SeJ6HPw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_KXSW8FxwEemuSa2HlCSMXQ" name="EthernetInterface">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_OCL7YFxwEemuSa2HlCSMXQ" name="physicalLayer"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_aPp90FxwEemuSa2HlCSMXQ" name="frameFormat"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_IRILoEaLEem6BKpTpByCDg" name="Interfaces"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_4913EGawEemGdJ8pNpynNg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_493sQGawEemGdJ8pNpynNg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../MEF_General_Common/UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_S32LgD8HEeiIisB6uOvKFA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../MEF_General_Common/UmlProfiles/OpenModelProfile/OpenModel_Profile.profile.uml#_m1xqsHBgEd6FKu9XX1078A"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_6LUW0GawEemGdJ8pNpynNg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6LWMAGawEemGdJ8pNpynNg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../MEF_General_Common/UmlProfiles/OpenInterfaceModelProfile/OpenInterfaceModel_Profile.profile.uml#_3NPRMD78EeiIisB6uOvKFA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../MEF_General_Common/UmlProfiles/OpenInterfaceModelProfile/OpenInterfaceModel_Profile.profile.uml#_UbM6ILbyEeaufdfMFhfy_A"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="__XKpQGazEemGdJ8pNpynNg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__ZiAwGazEemGdJ8pNpynNg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__ZiAwWazEemGdJ8pNpynNg" key="Version" value="0.0.4"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__ZiAwmazEemGdJ8pNpynNg" key="Comment" value="Metaclasses Property and Stereotype added via &lt;Element Import>."/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__ZiAw2azEemGdJ8pNpynNg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__ZiAxGazEemGdJ8pNpynNg" key="Date" value="2017-08-08"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__ZiAxWazEemGdJ8pNpynNg" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__ZgLkGazEemGdJ8pNpynNg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../MEF_General_Common/UmlProfiles/ProfileLifecycleProfile/ProfileLifecycle_Profile.profile.uml#_AL3HsHweEee8oZaf2rRQlg"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../MEF_General_Common/UmlProfiles/ProfileLifecycleProfile/ProfileLifecycle_Profile.profile.uml#_CBpGoEdZEearpawF38eisA"/>
+    </profileApplication>
+  </uml:Model>
+  <OpenModel_Profile:OpenModelStatement xmi:id="_ukz-cUaKEem6BKpTpByCDg" base_Model="_5rhWgEZxEem6BKpTpByCDg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xfONUFFPEem8JI7xzKeirA" base_StructuralFeature="_qeEV8v7VEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_xfO0YFFPEem8JI7xzKeirA" base_Property="_qeEV8v7VEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xfRQoFFPEem8JI7xzKeirA" base_StructuralFeature="_nfwKsf7VEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_xfRQoVFPEem8JI7xzKeirA" base_Property="_nfwKsf7VEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xfTF0FFPEem8JI7xzKeirA" base_StructuralFeature="_S3ZG8P7SEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_xfTF0VFPEem8JI7xzKeirA" base_Property="_S3ZG8P7SEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xfTF0lFPEem8JI7xzKeirA" base_StructuralFeature="_S3XRwP7SEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_xfTF01FPEem8JI7xzKeirA" base_Property="_S3XRwP7SEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xfUT8FFPEem8JI7xzKeirA" base_StructuralFeature="_caDcEP7qEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_xfU7AFFPEem8JI7xzKeirA" base_Property="_caDcEP7qEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xfWJIFFPEem8JI7xzKeirA" base_StructuralFeature="_dMAdcv7qEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_xfWJIVFPEem8JI7xzKeirA" base_Property="_dMAdcv7qEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xfXXQFFPEem8JI7xzKeirA" base_StructuralFeature="_u6tB4f7sEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_xfXXQVFPEem8JI7xzKeirA" base_Property="_u6tB4f7sEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xfZMcFFPEem8JI7xzKeirA" base_StructuralFeature="_s393kBgmEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_xfZMcVFPEem8JI7xzKeirA" base_Property="_s393kBgmEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xfbBoFFPEem8JI7xzKeirA" base_StructuralFeature="_TUh1Qhm1Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_xfbBoVFPEem8JI7xzKeirA" base_Property="_TUh1Qhm1Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xfcPwFFPEem8JI7xzKeirA" base_StructuralFeature="_L2aBYBm2Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_xfcPwVFPEem8JI7xzKeirA" base_Property="_L2aBYBm2Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_zWZKUFFPEem8JI7xzKeirA" base_StructuralFeature="_iTaMcUAiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_zWZxYFFPEem8JI7xzKeirA" base_Property="_iTaMcUAiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_0EEvsFFPEem8JI7xzKeirA" base_StructuralFeature="_jCSrs0AiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_0EEvsVFPEem8JI7xzKeirA" base_Property="_jCSrs0AiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_0rLzAFFPEem8JI7xzKeirA" base_StructuralFeature="_l8z8E0AiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_0rLzAVFPEem8JI7xzKeirA" base_Property="_l8z8E0AiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_1Iv4wFFPEem8JI7xzKeirA" base_StructuralFeature="_oqqCYUAiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_1Iwf0FFPEem8JI7xzKeirA" base_Property="_oqqCYUAiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_1bCioFFPEem8JI7xzKeirA" base_StructuralFeature="_psf54EAiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_1bCioVFPEem8JI7xzKeirA" base_Property="_psf54EAiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_2L9CMFFPEem8JI7xzKeirA" base_StructuralFeature="_gAr7kgR8EembRoaJ2tYEGQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_2L9pQFFPEem8JI7xzKeirA" base_Property="_gAr7kgR8EembRoaJ2tYEGQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_2ebSQFFPEem8JI7xzKeirA" base_StructuralFeature="_fg62YgR8EembRoaJ2tYEGQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_2eb5UFFPEem8JI7xzKeirA" base_Property="_fg62YgR8EembRoaJ2tYEGQ"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3n2_gFFPEem8JI7xzKeirA" base_Class="_csTI8P1FEeiVd-0lYI4k2g"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3n2_gVFPEem8JI7xzKeirA" base_Class="_csTI8P1FEeiVd-0lYI4k2g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n2_glFPEem8JI7xzKeirA" base_StructuralFeature="_u6rMsv7sEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n2_g1FPEem8JI7xzKeirA" base_Property="_u6rMsv7sEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n2_hFFPEem8JI7xzKeirA" base_StructuralFeature="_J3YqwP7tEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n3mkFFPEem8JI7xzKeirA" base_Property="_J3YqwP7tEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n3mkVFPEem8JI7xzKeirA" base_StructuralFeature="_LEn58P7tEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n3mklFPEem8JI7xzKeirA" base_Property="_LEn58P7tEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n3mk1FPEem8JI7xzKeirA" base_StructuralFeature="_NQX_0P7tEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n3mlFFPEem8JI7xzKeirA" base_Property="_NQX_0P7tEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n3mlVFPEem8JI7xzKeirA" base_StructuralFeature="_OdWwUP7tEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n3mllFPEem8JI7xzKeirA" base_Property="_OdWwUP7tEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n3ml1FPEem8JI7xzKeirA" base_StructuralFeature="_SrRiQP7tEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n3mmFFPEem8JI7xzKeirA" base_Property="_SrRiQP7tEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n3mmVFPEem8JI7xzKeirA" base_StructuralFeature="_UISS0P7tEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n3mmlFPEem8JI7xzKeirA" base_Property="_UISS0P7tEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n4NoFFPEem8JI7xzKeirA" base_StructuralFeature="_WyczAP7tEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n4NoVFPEem8JI7xzKeirA" base_Property="_WyczAP7tEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n4NolFPEem8JI7xzKeirA" base_StructuralFeature="_ZYUCAP7tEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n4No1FPEem8JI7xzKeirA" base_Property="_ZYUCAP7tEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n4NpFFPEem8JI7xzKeirA" base_StructuralFeature="_asSyYP7tEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n4NpVFPEem8JI7xzKeirA" base_Property="_asSyYP7tEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n4NplFPEem8JI7xzKeirA" base_StructuralFeature="_cHPGYP7tEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n4Np1FPEem8JI7xzKeirA" base_Property="_cHPGYP7tEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n4NqFFPEem8JI7xzKeirA" base_StructuralFeature="_d2A8YP7tEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n4NqVFPEem8JI7xzKeirA" base_Property="_d2A8YP7tEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n4NqlFPEem8JI7xzKeirA" base_StructuralFeature="_ol1CEBgoEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n40sFFPEem8JI7xzKeirA" base_Property="_ol1CEBgoEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3n40sVFPEem8JI7xzKeirA" base_Class="_rIXJ4P1FEeiVd-0lYI4k2g"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3n40slFPEem8JI7xzKeirA" base_Class="_rIXJ4P1FEeiVd-0lYI4k2g"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n40s1FPEem8JI7xzKeirA" base_StructuralFeature="_Q068MBgpEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n40tFFPEem8JI7xzKeirA" base_Property="_Q068MBgpEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n40tVFPEem8JI7xzKeirA" base_StructuralFeature="_bu8ZwBgpEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n40tlFPEem8JI7xzKeirA" base_Property="_bu8ZwBgpEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n40t1FPEem8JI7xzKeirA" base_StructuralFeature="_deaMQBgpEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n40uFFPEem8JI7xzKeirA" base_Property="_deaMQBgpEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n40uVFPEem8JI7xzKeirA" base_StructuralFeature="_e-bNgBgpEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n40ulFPEem8JI7xzKeirA" base_Property="_e-bNgBgpEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n5bwFFPEem8JI7xzKeirA" base_StructuralFeature="_gIyH0BgpEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n5bwVFPEem8JI7xzKeirA" base_Property="_gIyH0BgpEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n5bwlFPEem8JI7xzKeirA" base_StructuralFeature="_kES7IBgpEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n5bw1FPEem8JI7xzKeirA" base_Property="_kES7IBgpEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n5bxFFPEem8JI7xzKeirA" base_StructuralFeature="_laaZgBgpEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n5bxVFPEem8JI7xzKeirA" base_Property="_laaZgBgpEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n5bxlFPEem8JI7xzKeirA" base_StructuralFeature="_muaYABgpEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n5bx1FPEem8JI7xzKeirA" base_Property="_muaYABgpEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n5byFFPEem8JI7xzKeirA" base_StructuralFeature="_o3T-MBgpEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n5byVFPEem8JI7xzKeirA" base_Property="_o3T-MBgpEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n5bylFPEem8JI7xzKeirA" base_StructuralFeature="_sJlnQBgpEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n6C0FFPEem8JI7xzKeirA" base_Property="_sJlnQBgpEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n6C0VFPEem8JI7xzKeirA" base_StructuralFeature="_thyJQBgpEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n6C0lFPEem8JI7xzKeirA" base_Property="_thyJQBgpEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n6C01FPEem8JI7xzKeirA" base_StructuralFeature="_xG1kYBgpEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n6C1FFPEem8JI7xzKeirA" base_Property="_xG1kYBgpEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n6C1VFPEem8JI7xzKeirA" base_StructuralFeature="_0XuGUBgpEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n6C1lFPEem8JI7xzKeirA" base_Property="_0XuGUBgpEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3n6C11FPEem8JI7xzKeirA" base_Class="_xTESUP7qEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3n6C2FFPEem8JI7xzKeirA" base_Class="_xTESUP7qEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n6p4FFPEem8JI7xzKeirA" base_StructuralFeature="_gcu-YgR8EembRoaJ2tYEGQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n6p4VFPEem8JI7xzKeirA" base_Property="_gcu-YgR8EembRoaJ2tYEGQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n6p4lFPEem8JI7xzKeirA" base_StructuralFeature="_pserwEAiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n6p41FPEem8JI7xzKeirA" base_Property="_pserwEAiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3n6p5FFPEem8JI7xzKeirA" base_Class="_wJv50P7qEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3n6p5VFPEem8JI7xzKeirA" base_Class="_wJv50P7qEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n6p5lFPEem8JI7xzKeirA" base_StructuralFeature="_gArUgAR8EembRoaJ2tYEGQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n6p51FPEem8JI7xzKeirA" base_Property="_gArUgAR8EembRoaJ2tYEGQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n6p6FFPEem8JI7xzKeirA" base_StructuralFeature="_oqoNMkAiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n7Q8FFPEem8JI7xzKeirA" base_Property="_oqoNMkAiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3n7Q8VFPEem8JI7xzKeirA" base_Class="_u_gUQP7qEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3n7Q8lFPEem8JI7xzKeirA" base_Class="_u_gUQP7qEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n7Q81FPEem8JI7xzKeirA" base_StructuralFeature="_fg5oQAR8EembRoaJ2tYEGQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n7Q9FFPEem8JI7xzKeirA" base_Property="_fg5oQAR8EembRoaJ2tYEGQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n7Q9VFPEem8JI7xzKeirA" base_StructuralFeature="_l8zVAEAiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n7Q9lFPEem8JI7xzKeirA" base_Property="_l8zVAEAiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3n7Q91FPEem8JI7xzKeirA" base_Class="_t4dMoP7qEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3n7Q-FFPEem8JI7xzKeirA" base_Class="_t4dMoP7qEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n7Q-VFPEem8JI7xzKeirA" base_StructuralFeature="_e--m8gR8EembRoaJ2tYEGQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n7Q-lFPEem8JI7xzKeirA" base_Property="_e--m8gR8EembRoaJ2tYEGQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n74AFFPEem8JI7xzKeirA" base_StructuralFeature="_jCSEoUAiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n74AVFPEem8JI7xzKeirA" base_Property="_jCSEoUAiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3n74AlFPEem8JI7xzKeirA" base_Class="_r3T0QP7qEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3n74A1FPEem8JI7xzKeirA" base_Class="_r3T0QP7qEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n74BFFPEem8JI7xzKeirA" base_StructuralFeature="_edMIggR8EembRoaJ2tYEGQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n74BVFPEem8JI7xzKeirA" base_Property="_edMIggR8EembRoaJ2tYEGQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n74BlFPEem8JI7xzKeirA" base_StructuralFeature="_iTY-UUAiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n74B1FPEem8JI7xzKeirA" base_Property="_iTY-UUAiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3n74CFFPEem8JI7xzKeirA" base_Class="_p566gP7qEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3n74CVFPEem8JI7xzKeirA" base_Class="_p566gP7qEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n8fEFFPEem8JI7xzKeirA" base_StructuralFeature="_dCNYQAR8EembRoaJ2tYEGQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n8fEVFPEem8JI7xzKeirA" base_Property="_dCNYQAR8EembRoaJ2tYEGQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n8fElFPEem8JI7xzKeirA" base_StructuralFeature="_Q965kEAdEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n8fE1FPEem8JI7xzKeirA" base_Property="_Q965kEAdEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3n8fFFFPEem8JI7xzKeirA" base_Class="_HSxF0P7VEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3n8fFVFPEem8JI7xzKeirA" base_Class="_HSxF0P7VEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n8fFlFPEem8JI7xzKeirA" base_StructuralFeature="_IRrWYBm2Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n8fF1FPEem8JI7xzKeirA" base_Property="_IRrWYBm2Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n8fGFFPEem8JI7xzKeirA" base_StructuralFeature="_L2QQYBm2Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n8fGVFPEem8JI7xzKeirA" base_Property="_L2QQYBm2Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n8fGlFPEem8JI7xzKeirA" base_StructuralFeature="_4cGvYBm2Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n9GIFFPEem8JI7xzKeirA" base_Property="_4cGvYBm2Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n9GIVFPEem8JI7xzKeirA" base_StructuralFeature="_D8DkgBm3Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n9GIlFPEem8JI7xzKeirA" base_Property="_D8DkgBm3Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n9GI1FPEem8JI7xzKeirA" base_StructuralFeature="_1Lp10Bm3Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n9GJFFPEem8JI7xzKeirA" base_Property="_1Lp10Bm3Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3n9GJVFPEem8JI7xzKeirA" base_Class="_TBa6wP7UEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3n9GJlFPEem8JI7xzKeirA" base_Class="_TBa6wP7UEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3n9GJ1FPEem8JI7xzKeirA" base_Class="_RYXSQP7UEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3n9GKFFPEem8JI7xzKeirA" base_Class="_RYXSQP7UEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n9GKVFPEem8JI7xzKeirA" base_StructuralFeature="_qeDH0v7VEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n9GKlFPEem8JI7xzKeirA" base_Property="_qeDH0v7VEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n9tMFFPEem8JI7xzKeirA" base_StructuralFeature="_VFpxcBmxEemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n9tMVFPEem8JI7xzKeirA" base_Property="_VFpxcBmxEemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n9tMlFPEem8JI7xzKeirA" base_StructuralFeature="_jD4m4BmxEemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n9tM1FPEem8JI7xzKeirA" base_Property="_jD4m4BmxEemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n9tNFFPEem8JI7xzKeirA" base_StructuralFeature="_mJYYMBmxEemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n9tNVFPEem8JI7xzKeirA" base_Property="_mJYYMBmxEemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n9tNlFPEem8JI7xzKeirA" base_StructuralFeature="_p6_BkBmxEemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n9tN1FPEem8JI7xzKeirA" base_Property="_p6_BkBmxEemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n9tOFFPEem8JI7xzKeirA" base_StructuralFeature="_9IneoBmyEemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n9tOVFPEem8JI7xzKeirA" base_Property="_9IneoBmyEemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n9tOlFPEem8JI7xzKeirA" base_StructuralFeature="__t43wBmyEemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n9tO1FPEem8JI7xzKeirA" base_Property="__t43wBmyEemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n-UQFFPEem8JI7xzKeirA" base_StructuralFeature="_CKQMgBmzEemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n-UQVFPEem8JI7xzKeirA" base_Property="_CKQMgBmzEemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n-UQlFPEem8JI7xzKeirA" base_StructuralFeature="_EgBKABmzEemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n-UQ1FPEem8JI7xzKeirA" base_Property="_EgBKABmzEemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3n-URFFPEem8JI7xzKeirA" base_Class="_NW0vcP7UEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3n-URVFPEem8JI7xzKeirA" base_Class="_NW0vcP7UEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n-URlFPEem8JI7xzKeirA" base_StructuralFeature="_nfuVgv7VEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n-UR1FPEem8JI7xzKeirA" base_Property="_nfuVgv7VEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n-USFFPEem8JI7xzKeirA" base_StructuralFeature="_Ah3vsCDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n-USVFPEem8JI7xzKeirA" base_Property="_Ah3vsCDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n-USlFPEem8JI7xzKeirA" base_StructuralFeature="_DLBjQCDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n-US1FPEem8JI7xzKeirA" base_Property="_DLBjQCDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n-7UFFPEem8JI7xzKeirA" base_StructuralFeature="_G_3t4CDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n-7UVFPEem8JI7xzKeirA" base_Property="_G_3t4CDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n-7UlFPEem8JI7xzKeirA" base_StructuralFeature="_IcakYCDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n-7U1FPEem8JI7xzKeirA" base_Property="_IcakYCDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n-7VFFPEem8JI7xzKeirA" base_StructuralFeature="_LK_DcCDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n-7VVFPEem8JI7xzKeirA" base_Property="_LK_DcCDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n-7VlFPEem8JI7xzKeirA" base_StructuralFeature="_O0F4ICDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n-7V1FPEem8JI7xzKeirA" base_Property="_O0F4ICDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n-7WFFPEem8JI7xzKeirA" base_StructuralFeature="_Sd_XACDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n-7WVFPEem8JI7xzKeirA" base_Property="_Sd_XACDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n-7WlFPEem8JI7xzKeirA" base_StructuralFeature="_VCyPACDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n_iYFFPEem8JI7xzKeirA" base_Property="_VCyPACDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n_iYVFPEem8JI7xzKeirA" base_StructuralFeature="_XlOWkCDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n_iYlFPEem8JI7xzKeirA" base_Property="_XlOWkCDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n_iY1FPEem8JI7xzKeirA" base_StructuralFeature="_Z8mdoCDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n_iZFFPEem8JI7xzKeirA" base_Property="_Z8mdoCDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n_iZVFPEem8JI7xzKeirA" base_StructuralFeature="_cGQRwCDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n_iZlFPEem8JI7xzKeirA" base_Property="_cGQRwCDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n_iZ1FPEem8JI7xzKeirA" base_StructuralFeature="_eeX_sCDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n_iaFFPEem8JI7xzKeirA" base_Property="_eeX_sCDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n_iaVFPEem8JI7xzKeirA" base_StructuralFeature="_g4OzACDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3n_ialFPEem8JI7xzKeirA" base_Property="_g4OzACDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3n_ia1FPEem8JI7xzKeirA" base_StructuralFeature="_ilciwCDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oAJcFFPEem8JI7xzKeirA" base_Property="_ilciwCDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oAJcVFPEem8JI7xzKeirA" base_StructuralFeature="_kYSZYCDVEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oAJclFPEem8JI7xzKeirA" base_Property="_kYSZYCDVEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oAJc1FPEem8JI7xzKeirA" base_Class="_Qwz_gP7TEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oAJdFFPEem8JI7xzKeirA" base_Class="_Qwz_gP7TEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oAJdVFPEem8JI7xzKeirA" base_StructuralFeature="_8AMI4BmwEemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oAJdlFPEem8JI7xzKeirA" base_Property="_8AMI4BmwEemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oAJd1FPEem8JI7xzKeirA" base_StructuralFeature="_gZbCACDTEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oAJeFFPEem8JI7xzKeirA" base_Property="_gZbCACDTEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oAJeVFPEem8JI7xzKeirA" base_StructuralFeature="_556ZsCDTEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oAJelFPEem8JI7xzKeirA" base_Property="_556ZsCDTEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oAJe1FPEem8JI7xzKeirA" base_StructuralFeature="_-spI4CDTEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oAwgFFPEem8JI7xzKeirA" base_Property="_-spI4CDTEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oAwgVFPEem8JI7xzKeirA" base_StructuralFeature="_CEhDoCDUEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oAwglFPEem8JI7xzKeirA" base_Property="_CEhDoCDUEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oAwg1FPEem8JI7xzKeirA" base_StructuralFeature="_EVBtsCDUEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oAwhFFPEem8JI7xzKeirA" base_Property="_EVBtsCDUEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oAwhVFPEem8JI7xzKeirA" base_StructuralFeature="_GgYyACDUEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oAwhlFPEem8JI7xzKeirA" base_Property="_GgYyACDUEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oAwh1FPEem8JI7xzKeirA" base_StructuralFeature="_J2OFYCDUEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oAwiFFPEem8JI7xzKeirA" base_Property="_J2OFYCDUEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oAwiVFPEem8JI7xzKeirA" base_StructuralFeature="_Nu0HkCDUEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oAwilFPEem8JI7xzKeirA" base_Property="_Nu0HkCDUEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oAwi1FPEem8JI7xzKeirA" base_StructuralFeature="_QV-XECDUEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oAwjFFPEem8JI7xzKeirA" base_Property="_QV-XECDUEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oBXkFFPEem8JI7xzKeirA" base_StructuralFeature="_SXj0UCDUEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oBXkVFPEem8JI7xzKeirA" base_Property="_SXj0UCDUEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oBXklFPEem8JI7xzKeirA" base_StructuralFeature="_WslT0CDUEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oBXk1FPEem8JI7xzKeirA" base_Property="_WslT0CDUEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oBXlFFPEem8JI7xzKeirA" base_StructuralFeature="_YHVakCDUEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oBXlVFPEem8JI7xzKeirA" base_Property="_YHVakCDUEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oBXllFPEem8JI7xzKeirA" base_StructuralFeature="_aXb08CDUEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oBXl1FPEem8JI7xzKeirA" base_Property="_aXb08CDUEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oBXmFFPEem8JI7xzKeirA" base_StructuralFeature="_brO_ICDUEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oBXmVFPEem8JI7xzKeirA" base_Property="_brO_ICDUEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oBXmlFPEem8JI7xzKeirA" base_StructuralFeature="_d_7loCDUEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oB-oFFPEem8JI7xzKeirA" base_Property="_d_7loCDUEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oB-oVFPEem8JI7xzKeirA" base_StructuralFeature="_fvKHkCDUEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oB-olFPEem8JI7xzKeirA" base_Property="_fvKHkCDUEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oB-o1FPEem8JI7xzKeirA" base_StructuralFeature="_hCVmsCDUEemnI4z3fL5gCw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oB-pFFPEem8JI7xzKeirA" base_Property="_hCVmsCDUEemnI4z3fL5gCw"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oB-pVFPEem8JI7xzKeirA" base_Class="_FOYTkP7SEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oB-plFPEem8JI7xzKeirA" base_Class="_FOYTkP7SEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oB-p1FPEem8JI7xzKeirA" base_StructuralFeature="_caCN8v7qEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oB-qFFPEem8JI7xzKeirA" base_Property="_caCN8v7qEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oB-qVFPEem8JI7xzKeirA" base_Class="_iCKoAP7SEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oB-qlFPEem8JI7xzKeirA" base_Class="_iCKoAP7SEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oB-q1FPEem8JI7xzKeirA" base_StructuralFeature="_dL_2Yf7qEeiRvO5IMGZvoA"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oClsFFPEem8JI7xzKeirA" base_Property="_dL_2Yf7qEeiRvO5IMGZvoA"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oClsVFPEem8JI7xzKeirA" base_StructuralFeature="_0tA7AA-QEemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oClslFPEem8JI7xzKeirA" base_Property="_0tA7AA-QEemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oCls1FPEem8JI7xzKeirA" base_StructuralFeature="_6451gA-QEemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oCltFFPEem8JI7xzKeirA" base_Property="_6451gA-QEemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oCltVFPEem8JI7xzKeirA" base_StructuralFeature="_C_NOQA-REemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oCltlFPEem8JI7xzKeirA" base_Property="_C_NOQA-REemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oClt1FPEem8JI7xzKeirA" base_StructuralFeature="_htVvgA-REemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oCluFFPEem8JI7xzKeirA" base_Property="_htVvgA-REemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oCluVFPEem8JI7xzKeirA" base_StructuralFeature="_kpMcoA-REemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oClulFPEem8JI7xzKeirA" base_Property="_kpMcoA-REemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oClu1FPEem8JI7xzKeirA" base_StructuralFeature="_XS57gA-SEemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oDMwFFPEem8JI7xzKeirA" base_Property="_XS57gA-SEemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oDMwVFPEem8JI7xzKeirA" base_StructuralFeature="_a6YYgA-SEemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oDMwlFPEem8JI7xzKeirA" base_Property="_a6YYgA-SEemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oDMw1FPEem8JI7xzKeirA" base_StructuralFeature="_efp2EA-SEemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oDMxFFPEem8JI7xzKeirA" base_Property="_efp2EA-SEemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oDMxVFPEem8JI7xzKeirA" base_StructuralFeature="_ifAAgA-SEemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oDMxlFPEem8JI7xzKeirA" base_Property="_ifAAgA-SEemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oDMx1FPEem8JI7xzKeirA" base_StructuralFeature="_oBR9UA-SEemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oDMyFFPEem8JI7xzKeirA" base_Property="_oBR9UA-SEemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oDMyVFPEem8JI7xzKeirA" base_StructuralFeature="_2RmoUA-SEemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oDMylFPEem8JI7xzKeirA" base_Property="_2RmoUA-SEemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oDz0FFPEem8JI7xzKeirA" base_StructuralFeature="_5Dh9YA-SEemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oDz0VFPEem8JI7xzKeirA" base_Property="_5Dh9YA-SEemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oDz0lFPEem8JI7xzKeirA" base_StructuralFeature="_8TCmUA-SEemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oDz01FPEem8JI7xzKeirA" base_Property="_8TCmUA-SEemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oDz1FFPEem8JI7xzKeirA" base_StructuralFeature="_-dUFgA-SEemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oDz1VFPEem8JI7xzKeirA" base_Property="_-dUFgA-SEemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oDz1lFPEem8JI7xzKeirA" base_StructuralFeature="_APsCEA-TEemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oDz11FPEem8JI7xzKeirA" base_Property="_APsCEA-TEemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oDz2FFPEem8JI7xzKeirA" base_StructuralFeature="_gSPYkA-TEemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oDz2VFPEem8JI7xzKeirA" base_Property="_gSPYkA-TEemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oDz2lFPEem8JI7xzKeirA" base_StructuralFeature="_kuVJYA-TEemdP7URiIG7_Q"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oDz21FPEem8JI7xzKeirA" base_Property="_kuVJYA-TEemdP7URiIG7_Q"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oDz3FFPEem8JI7xzKeirA" base_StructuralFeature="_s33J4BgmEem7SrptZVvCVg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oDz3VFPEem8JI7xzKeirA" base_Property="_s33J4BgmEem7SrptZVvCVg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oEa4FFPEem8JI7xzKeirA" base_Class="_M1LosBm0Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oEa4VFPEem8JI7xzKeirA" base_Class="_M1LosBm0Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oEa4lFPEem8JI7xzKeirA" base_StructuralFeature="_QX79wBm0Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oEa41FPEem8JI7xzKeirA" base_Property="_QX79wBm0Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oEa5FFPEem8JI7xzKeirA" base_StructuralFeature="_WtLBgBm0Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oEa5VFPEem8JI7xzKeirA" base_Property="_WtLBgBm0Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oEa5lFPEem8JI7xzKeirA" base_StructuralFeature="_cBPjMBm0Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oEa51FPEem8JI7xzKeirA" base_Property="_cBPjMBm0Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oEa6FFPEem8JI7xzKeirA" base_StructuralFeature="_TUgnIhm1Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oEa6VFPEem8JI7xzKeirA" base_Property="_TUgnIhm1Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oEa6lFPEem8JI7xzKeirA" base_StructuralFeature="_Yf-mcBm1Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oEa61FPEem8JI7xzKeirA" base_Property="_Yf-mcBm1Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oEa7FFPEem8JI7xzKeirA" base_StructuralFeature="_m-qdkBm1Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oFB8FFPEem8JI7xzKeirA" base_Property="_m-qdkBm1Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oFB8VFPEem8JI7xzKeirA" base_StructuralFeature="_pjE7EBm1Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oFB8lFPEem8JI7xzKeirA" base_Property="_pjE7EBm1Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oFB81FPEem8JI7xzKeirA" base_StructuralFeature="_swaZwBm1Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oFB9FFPEem8JI7xzKeirA" base_Property="_swaZwBm1Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oFB9VFPEem8JI7xzKeirA" base_StructuralFeature="_t1LpcBm1Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oFB9lFPEem8JI7xzKeirA" base_Property="_t1LpcBm1Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oFB91FPEem8JI7xzKeirA" base_StructuralFeature="_vRPXwBm1Eemx7Omi9qjTUw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oFB-FFPEem8JI7xzKeirA" base_Property="_vRPXwBm1Eemx7Omi9qjTUw"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oFB-VFPEem8JI7xzKeirA" base_Class="_Vv2-MEcmEem2jN-8UHEy0A"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oFB-lFPEem8JI7xzKeirA" base_Class="_Vv2-MEcmEem2jN-8UHEy0A"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oFB-1FPEem8JI7xzKeirA" base_StructuralFeature="_Vv2-MUcmEem2jN-8UHEy0A"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oFpAFFPEem8JI7xzKeirA" base_Property="_Vv2-MUcmEem2jN-8UHEy0A"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oFpAVFPEem8JI7xzKeirA" base_Class="_Vv4zYEcmEem2jN-8UHEy0A"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oFpAlFPEem8JI7xzKeirA" base_Class="_Vv4zYEcmEem2jN-8UHEy0A"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oFpA1FPEem8JI7xzKeirA" base_StructuralFeature="_Vv4zYUcmEem2jN-8UHEy0A"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oFpBFFPEem8JI7xzKeirA" base_Property="_Vv4zYUcmEem2jN-8UHEy0A"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oFpBVFPEem8JI7xzKeirA" base_Class="_Vv6BgEcmEem2jN-8UHEy0A"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oFpBlFPEem8JI7xzKeirA" base_Class="_Vv6BgEcmEem2jN-8UHEy0A"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oFpB1FPEem8JI7xzKeirA" base_StructuralFeature="_Vv6BgUcmEem2jN-8UHEy0A"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oFpCFFPEem8JI7xzKeirA" base_Property="_Vv6BgUcmEem2jN-8UHEy0A"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oFpCVFPEem8JI7xzKeirA" base_Class="_Vv7PoEcmEem2jN-8UHEy0A"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oFpClFPEem8JI7xzKeirA" base_Class="_Vv7PoEcmEem2jN-8UHEy0A"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oFpC1FPEem8JI7xzKeirA" base_StructuralFeature="_Vv7PoUcmEem2jN-8UHEy0A"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oGQEFFPEem8JI7xzKeirA" base_Property="_Vv7PoUcmEem2jN-8UHEy0A"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oGQEVFPEem8JI7xzKeirA" base_Class="_etG0IEAiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oGQElFPEem8JI7xzKeirA" base_Class="_etG0IEAiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oGQE1FPEem8JI7xzKeirA" base_Class="_a17HMEAiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oGQFFFPEem8JI7xzKeirA" base_Class="_a17HMEAiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oGQFVFPEem8JI7xzKeirA" base_Class="_XxuWYEAiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oGQFlFPEem8JI7xzKeirA" base_Class="_XxuWYEAiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oGQF1FPEem8JI7xzKeirA" base_Class="_VRqNYEAiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oGQGFFPEem8JI7xzKeirA" base_Class="_VRqNYEAiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oGQGVFPEem8JI7xzKeirA" base_Class="_EMsCwEAdEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oGQGlFPEem8JI7xzKeirA" base_Class="_EMsCwEAdEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oGQG1FPEem8JI7xzKeirA" base_StructuralFeature="_UIZ4kEAdEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oG3IFFPEem8JI7xzKeirA" base_Property="_UIZ4kEAdEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oG3IVFPEem8JI7xzKeirA" base_StructuralFeature="_rNzG0EAdEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oG3IlFPEem8JI7xzKeirA" base_Property="_rNzG0EAdEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oG3I1FPEem8JI7xzKeirA" base_StructuralFeature="_fHdqUEAhEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oG3JFFPEem8JI7xzKeirA" base_Property="_fHdqUEAhEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oG3JVFPEem8JI7xzKeirA" base_StructuralFeature="_0m_uAEAhEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oG3JlFPEem8JI7xzKeirA" base_Property="_0m_uAEAhEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oG3J1FPEem8JI7xzKeirA" base_Class="_zV7DEEpmEemiTOBL29UmAw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oG3KFFPEem8JI7xzKeirA" base_Class="_zV7DEEpmEemiTOBL29UmAw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oG3KVFPEem8JI7xzKeirA" base_StructuralFeature="_g_YUIEpnEemiTOBL29UmAw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oG3KlFPEem8JI7xzKeirA" base_Property="_g_YUIEpnEemiTOBL29UmAw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oHeMFFPEem8JI7xzKeirA" base_StructuralFeature="_h9b-MEpvEemiTOBL29UmAw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oHeMVFPEem8JI7xzKeirA" base_Property="_h9b-MEpvEemiTOBL29UmAw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oHeMlFPEem8JI7xzKeirA" base_StructuralFeature="_kt_aQEpvEemiTOBL29UmAw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oHeM1FPEem8JI7xzKeirA" base_Property="_kt_aQEpvEemiTOBL29UmAw"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_3oHeNFFPEem8JI7xzKeirA" base_Class="_SyCwUEAiEemOP_EuHKL_sg"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_3oHeNVFPEem8JI7xzKeirA" base_Class="_SyCwUEAiEemOP_EuHKL_sg"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_3oJTYFFPEem8JI7xzKeirA" base_StructuralFeature="_gcwMggR8EembRoaJ2tYEGQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_3oJTYVFPEem8JI7xzKeirA" base_Property="_gcwMggR8EembRoaJ2tYEGQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_4ALY4FFPEem8JI7xzKeirA" base_StructuralFeature="_edNWoQR8EembRoaJ2tYEGQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_4AL_8FFPEem8JI7xzKeirA" base_Property="_edNWoQR8EembRoaJ2tYEGQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_4YdWAFFPEem8JI7xzKeirA" base_StructuralFeature="_dCP0gAR8EembRoaJ2tYEGQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_4Yd9EFFPEem8JI7xzKeirA" base_Property="_dCP0gAR8EembRoaJ2tYEGQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_4py9oFFPEem8JI7xzKeirA" base_StructuralFeature="_e-_1EgR8EembRoaJ2tYEGQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_4pzksFFPEem8JI7xzKeirA" base_Property="_e-_1EgR8EembRoaJ2tYEGQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_ZJCCgVI0Eemz-84SeJ6HPw" base_Property="_ZJCCgFI0Eemz-84SeJ6HPw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_ZJDQoFI0Eemz-84SeJ6HPw" base_StructuralFeature="_ZJCCgFI0Eemz-84SeJ6HPw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_ZJD3sVI0Eemz-84SeJ6HPw" base_Property="_ZJD3sFI0Eemz-84SeJ6HPw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_ZJEewFI0Eemz-84SeJ6HPw" base_StructuralFeature="_ZJD3sFI0Eemz-84SeJ6HPw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_akDPAlI0Eemz-84SeJ6HPw" base_Property="_akDPAVI0Eemz-84SeJ6HPw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_akEdIFI0Eemz-84SeJ6HPw" base_StructuralFeature="_akDPAVI0Eemz-84SeJ6HPw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_akFEMFI0Eemz-84SeJ6HPw" base_Property="_akEdIVI0Eemz-84SeJ6HPw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_akFEMVI0Eemz-84SeJ6HPw" base_StructuralFeature="_akEdIVI0Eemz-84SeJ6HPw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_dBVJwFI0Eemz-84SeJ6HPw" base_Class="_dBUisFI0Eemz-84SeJ6HPw"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_dBVw0FI0Eemz-84SeJ6HPw" base_Class="_dBUisFI0Eemz-84SeJ6HPw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_vrlisFumEem72qyALm4SBw" base_Property="_vrk7olumEem72qyALm4SBw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_vrmJwFumEem72qyALm4SBw" base_StructuralFeature="_vrk7olumEem72qyALm4SBw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_vrnX4FumEem72qyALm4SBw" base_Property="_vrmw0VumEem72qyALm4SBw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_vrnX4VumEem72qyALm4SBw" base_StructuralFeature="_vrmw0VumEem72qyALm4SBw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_w5lm4FumEem72qyALm4SBw" base_Property="_w5k_0lumEem72qyALm4SBw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_w5lm4VumEem72qyALm4SBw" base_StructuralFeature="_w5k_0lumEem72qyALm4SBw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_w5mN81umEem72qyALm4SBw" base_Property="_w5mN8lumEem72qyALm4SBw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_w5m1AFumEem72qyALm4SBw" base_StructuralFeature="_w5mN8lumEem72qyALm4SBw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_xW_7oVumEem72qyALm4SBw" base_Property="_xW_7oFumEem72qyALm4SBw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xXAisFumEem72qyALm4SBw" base_StructuralFeature="_xW_7oFumEem72qyALm4SBw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_xXAitFumEem72qyALm4SBw" base_Property="_xXAis1umEem72qyALm4SBw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_xXAitVumEem72qyALm4SBw" base_StructuralFeature="_xXAis1umEem72qyALm4SBw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_GPU1Y1unEem72qyALm4SBw" base_Property="_GPU1YlunEem72qyALm4SBw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_GPVccFunEem72qyALm4SBw" base_StructuralFeature="_GPU1YlunEem72qyALm4SBw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_GPWDg1unEem72qyALm4SBw" base_Property="_GPWDglunEem72qyALm4SBw"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_GPWqkFunEem72qyALm4SBw" base_StructuralFeature="_GPWDglunEem72qyALm4SBw"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelClass xmi:id="_KXVaQFxwEemuSa2HlCSMXQ" base_Class="_KXSW8FxwEemuSa2HlCSMXQ"/>
+  <OpenModel_Profile:OpenModelClass xmi:id="_KXWBUFxwEemuSa2HlCSMXQ" base_Class="_KXSW8FxwEemuSa2HlCSMXQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_OCL7YVxwEemuSa2HlCSMXQ" base_Property="_OCL7YFxwEemuSa2HlCSMXQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_OCMicFxwEemuSa2HlCSMXQ" base_StructuralFeature="_OCL7YFxwEemuSa2HlCSMXQ"/>
+  <OpenInterfaceModel_Profile:OpenInterfaceModelAttribute xmi:id="_aPp90VxwEemuSa2HlCSMXQ" base_Property="_aPp90FxwEemuSa2HlCSMXQ"/>
+  <OpenModel_Profile:OpenModelAttribute xmi:id="_aPqk4FxwEemuSa2HlCSMXQ" base_StructuralFeature="_aPp90FxwEemuSa2HlCSMXQ"/>
+</xmi:XMI>
